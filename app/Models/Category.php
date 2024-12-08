@@ -27,4 +27,14 @@ class Category extends Model
             get: fn ($value) => url('/storage/categories/' . $value),
         );
     }
+
+    /**
+     * products
+     *
+     * @return void
+     */
+    public function products()
+    {
+        return $this->hasMany(Product::class);
+    }
 }
